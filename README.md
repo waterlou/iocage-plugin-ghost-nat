@@ -10,7 +10,7 @@
 On FreeNAS shell:
 
     curl -o /tmp/ghost-nat.json https://raw.githubusercontent.com/waterlou/iocage-plugin-ghost-nat/master/ghost-nat.json
-    sudo iocage fetch -P /tmp/ghost-nat.json
+    iocage fetch -P /tmp/ghost-nat.json
 
 # Settings
 
