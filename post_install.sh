@@ -6,7 +6,7 @@ GHOST_PATH=/usr/local/share/ghost
 npm -g install ghost-cli
 
 # Use ghost cli to install source
-lsmkdir -p ${GHOST_PATH}
+mkdir -p ${GHOST_PATH}
 cd ${GHOST_PATH}
 
 # create config file
