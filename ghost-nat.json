@@ -6,7 +6,8 @@
 		"allow_raw_sockets":"1",
 		"boot": "on",
 		"nat": "on",
-		"vnet": "on"
+		"vnet": "on",
+		"nat_forwards": "tcp(2368:2368)"
 	},
   "pkgs": [
   "lang/python3",
