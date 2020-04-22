@@ -7,10 +7,25 @@
 
 # Installation
 
-On FreeNAS shell:
+On FreeNAS root shell:
 
     curl -o /tmp/ghost-nat.json https://raw.githubusercontent.com/waterlou/iocage-plugin-ghost-nat/master/ghost-nat.json
     iocage fetch -P /tmp/ghost-nat.json
+
+# Post Installation
+
+By default, the plugin use localhost as the default URL, that will break most links in Ghost.  You should set the url to the FreeNAS.  e.g. http://freenas.local:2368 or http://192.168.1.11:2368
+
+To change this setting, run the following in the jail shell:
+
+    cd /usr/local/share/ghost
+    ghost stop
+    ghost config --ip 0.0.0.0 --port 2368 --no-prompt --db sqlite3 --url http://freenas.local:2368
+    ghost start
+
+TODO:
+
+    Instruction to mount content path
 
 # Settings
 
